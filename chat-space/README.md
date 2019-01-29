@@ -40,23 +40,23 @@ Things you may want to cover:
 |------|----|-------|
 |name|string|null: false, unique: true|
 |e-mail|string|null:false, unique: true|
-|group_id|integer|
+|group_id|reference|
 ### Association
 - has_many :groups, throught: :group_users
 - has_many :group_users
-- has_many :users
+- has_many :messages
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, unique: true|
-|user|string|null: false|
+|user_name|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :users, throught: :group_users
 - has_many :group_users
-- has_many :users
+- has_many :messages
 
 ## group_userテーブル
 Column|Type|Options|
