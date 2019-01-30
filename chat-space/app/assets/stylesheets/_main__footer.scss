@@ -5,21 +5,21 @@
       .footer__container{
         margin: 0 40px;
         height:100%;
-        .container__body{
+        .footer__body{
           padding:20px 0;
           height:calc(100% - 40px);
-          .body__form{
+          .footer__form{
             width:90%;
             height:50px;
             float:left;
-            .message{
+            .footer__message{
               float:left;
               padding-left:10px;
               width:calc( 100% - 65px);
               height: 50px;
               border: none;
                   }
-            .image{
+            .footer__image{
               width:40px;
               height:50px;
               float:left;
@@ -27,13 +27,13 @@
               line-height:50px;
               text-align:center;
                   }
-            .space{
+            .footer__space{
               width:15px;
               height:50px;
               float:left;
                   }
                 }
-          .body__btn{
+          .footer__btn{
             float:right;
             background-color:$lightblue;
             padding: 15px 20px;

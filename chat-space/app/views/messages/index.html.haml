@@ -11,8 +11,8 @@
       .notice チャットグループが作成されました
     .user
       .user__top
-        .top__content
-          .content__name
+        .user__content
+          .user__name
             user name
             %a{:href => ""}
               %i.fas.fa-cog
@@ -22,21 +22,21 @@
         = render partial: "group__user"
     .main
       .main__top
-        .top__content
-          .content__title
-            .group sampleグループ
-            .edit__btn Edit
-          .name Member: seo neko
+        .main__content
+          .main__title
+            .main__group sampleグループ
+            .main__edit--btn Edit
+          .main__name Member: seo neko
       .main__container
-        .container__content
+        .main__content
           = render partial: "message"
       .footer
         .footer__container
-          .container__body
-            .body__form
-              %input.message{:placeholder => "type a message", :type => "text"}/
-              .image
+          .footer__body
+            .footer__form
+              %input.footer__message{:placeholder => "type a message", :type => "text"}/
+              .footer__image
                 %a.image{:href => "#"}
                   %i.far.fa-image
-              .space
-            .body__btn Send
+              .footer__space
+            .footer__btn Send
