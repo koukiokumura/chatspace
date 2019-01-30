@@ -124,4 +124,6 @@ legend {
 }
 /* YUI CSS Detection Stamp */
 #yui3-css-stamp.cssreset { display: none; }
-@import "./variable";
+
+@import "font-awesome-sprockets";
+@import "font-awesome";

@@ -1,15 +1,6 @@
 @import "./reset";
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.notice {
-  background-color: #38AEF0;
-  color: white;
-  text-align: center;
-}
+@import "./variable";
+@import "./common";
 @import "./side";
 @import "./main";
 @import "./main__footer"
