@@ -62,7 +62,7 @@ Things you may want to cover:
 Column|Type|Options|
 |------|----|-------|
 |user_id|reference|
-|group_id|reference|ss
+|group_id|reference|
 ### Association
 - belongs_to :group
 - belongs_to :user
