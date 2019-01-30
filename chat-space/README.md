@@ -29,8 +29,8 @@ Things you may want to cover:
 |------|----|-------|
 |text|text|
 |image|string|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|reference|
+|group_id|reference|
 ### Association
 - belongs_to :group
 - belongs_to :user
@@ -51,7 +51,7 @@ Things you may want to cover:
 |------|----|-------|
 |name|string|null: false, unique: true|
 |user_name|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
+|user_id|reference|
 
 ### Association
 - has_many :users, throught: :group_users
@@ -61,8 +61,8 @@ Things you may want to cover:
 ## group_userテーブル
 Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|reference|
+|group_id|reference|ss
 ### Association
 - belongs_to :group
 - belongs_to :user
