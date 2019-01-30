@@ -5,10 +5,10 @@
       .footer__container{
         margin: 0 40px;
         height:100%;
-        .footer__container__body{
+        .container__body{
           padding:20px 0;
           height:calc(100% - 40px);
-          .footer__container__body__form{
+          .body__form{
             width:90%;
             height:50px;
             float:left;
@@ -33,7 +33,7 @@
               float:left;
                   }
                 }
-          .footer__container__body__btn{
+          .body__btn{
             float:right;
             background-color:$lightblue;
             padding: 15px 20px;
