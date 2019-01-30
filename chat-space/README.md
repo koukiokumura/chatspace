@@ -27,10 +27,10 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
+|text|text|
 |image|string|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|reference|
+|group_id|reference|
 ### Association
 - belongs_to :group
 - belongs_to :user
@@ -40,25 +40,29 @@ Things you may want to cover:
 |------|----|-------|
 |name|string|null: false, unique: true|
 |e-mail|string|null:false, unique: true|
-|group_id|integer|null: false, foreign_key: true|
+|group_id|reference|
 ### Association
 - has_many :groups, throught: :group_users
 - has_many :group_users
+- has_many :messages
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false, unique: true|
-|user_id|integer|null: false, foreign_key: true|
+|name|string|null: false, unique: true|
+|user_name|string|null: false|
+|user_id|reference|
+
 ### Association
 - has_many :users, throught: :group_users
 - has_many :group_users
+- has_many :messages
 
-## group_user
+## group_userテーブル
 Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user_id|reference|
+|group_id|reference|
 ### Association
 - belongs_to :group
 - belongs_to :user
