@@ -1,0 +1,48 @@
+.footer{
+  height:90px;
+  width:100%;
+  background-color:#AAAAAA;
+  &__container{
+    margin: 0 40px;
+    height:100%;
+    &-body{
+      padding:20px 0;
+      height:calc(100% - 40px);
+      &-form{
+        width:90%;
+        height:50px;
+        float:left;
+        &--message{
+          float:left;
+          padding-left:10px;
+          width:calc( 100% - 65px);
+          height: 50px;
+          border: none;
+              }
+        &--image{
+          width:40px;
+          height:50px;
+          float:left;
+          background-color:white;
+          line-height:50px;
+          text-align:center;
+              }
+        &--space{
+          width:15px;
+          height:50px;
+          float:left;
+              }
+            }
+      &-btn{
+        float:right;
+        background-color:$lightblue;
+        padding: 15px 20px;
+        color:white;
+        width:5%;
+        height:20px;
+        text-align:center;
+        line-height:20px;
+      }
+    }
+    }
+  }
