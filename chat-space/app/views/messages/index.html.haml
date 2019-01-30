@@ -1,42 +1,42 @@
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %meta{:charset => "utf-8"}/
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{charset: "utf-8"}/
     %title chatspace
-    %link{:href => "application.scss", :rel => "stylesheet"}/
-    %link{:href => "https://use.fontawesome.com/releases/v5.6.1/css/all.css", :rel => "stylesheet"}/
+    %link{href: "application.scss", rel: "stylesheet"}/
+    %link{href: "https://use.fontawesome.com/releases/v5.6.1/css/all.css", rel: "stylesheet"}/
   %body
     .notification
       .notice チャットグループが作成されました
-    .user
-      .user__top
-        .user__content
-          .user__name
+    .side
+      .side__user
+        .side__user-content
+          .side__user-content-name
             user name
             %a{:href => ""}
               %i.fas.fa-cog
             %a{:href => ""}
               %i.fas.fa-edit
-      .user__bottom
+      .side__group
         = render partial: "group__user"
     .main
-      .main__top
-        .main__content
-          .main__title
-            .main__group sampleグループ
-            .main__edit--btn Edit
-          .main__name Member: seo neko
+      .main__header
+        .main__header-content
+          .main__header-content-title
+            .main__header-content-title__group sampleグループ
+            .main__header-content-title__btn Edit
+          .main__header-content-name Member: seo neko
       .main__container
-        .main__content
+        .main__container-content
           = render partial: "message"
       .footer
         .footer__container
-          .footer__body
-            .footer__form
-              %input.footer__message{:placeholder => "type a message", :type => "text"}/
-              .footer__image
+          .footer__container-body
+            .footer__container-body-form
+              %input.footer__container-body-form--message{placeholder: "type a message", type: "text"}/
+              .footer__container-body-form--image
                 %a.image{:href => "#"}
                   %i.far.fa-image
-              .footer__space
-            .footer__btn Send
+              .footer__container-body-form--space
+            .footer__container-body-btn Send
