@@ -1,0 +1,42 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "utf-8"}/
+    %title chatspace
+    %link{:href => "application.scss", :rel => "stylesheet"}/
+    %link{:href => "https://use.fontawesome.com/releases/v5.6.1/css/all.css", :rel => "stylesheet"}/
+  %body
+    .notification
+      .notice チャットグループが作成されました
+    .user
+      .user__top
+        .user__top__content
+          .user__top__content__name
+            user name
+            %a{:href => ""}
+              %i.fas.fa-cog
+            %a{:href => ""}
+              %i.fas.fa-edit
+      .user__bottom
+        = render partial: "group__user"
+    .main
+      .main__top
+        .main__top__content
+          .main__top__content__title
+            .group sampleグループ
+            .edit__btn Edit
+          .name Member: seo neko
+      .main__container
+        .main__container__content
+          = render partial: "message"
+      .footer
+        .footer__container
+          .footer__container__body
+            .footer__container__body__form
+              %input.message{:placeholder => "type a message", :type => "text"}/
+              .image
+                %a.image{:href => "#"}
+                  %i.far.fa-image
+              .space
+            .footer__container__body__btn Send

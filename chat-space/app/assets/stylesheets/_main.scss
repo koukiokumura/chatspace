@@ -1,0 +1,69 @@
+.main {
+  float: left;
+  width: calc( 100vw - 300px );
+  height: 100vh;
+    .main__top {
+      height: 15%;
+      border: 1px solid $offwhite;
+        .main__top__content {
+          margin: 0 40px;
+            .main__top__content__title {
+              margin-top: 28px;
+                .group {
+                  margin: 7px 0 15px;
+                  width: 50%;
+                  font-size: 20px;
+                  color: #333333;
+                  float: left;
+                }
+                .edit__btn {
+                  float: right;
+                  color: $lightblue;
+                  padding: 15px 20px;
+                  border: 1px solid $lightblue;
+                    }
+                  }
+              .name {
+                clear: both;
+                font-size: 12px;
+                color: $gray;
+                    }
+                  }
+                }
+    .main__container {
+      background-color: $offwhite;
+      height:calc( 100vh - 15% - 92px );
+        .main__container__content {
+          height: 100%;
+          margin: 0 40px;
+            .main__container__content__body {
+              float: left;
+              height: 50px;
+              width: 80%;
+              margin: 46px 0 40px;
+                .main__container__content__body__name {
+                  height: 20px;
+                    .main__container__content__body__name__user {
+                      float: left;
+                      font-size: 16px;
+                      line-height: 20px;
+                      color: #434A54;
+                      font-style: bold;
+                    }
+                    .main__container__content__body__name__time {
+                      float: left;
+                      margin: 1px 0 0 10px;
+                      font-size: 12px;
+                      line-height: 20px;
+                      color: $gray;
+                          }
+                        }
+                .message{
+                  font-size: 14px;
+                  margin-top: 10px;
+                }
+              }
+            }
+          }
+@import "./main__footer";
+  }
