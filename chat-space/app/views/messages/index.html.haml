@@ -1,0 +1,22 @@
+= render partial: "side"
+.main
+  .main__header
+    .main__header-content
+      .main__header-content-title
+        .main__header-content-title__group sampleグループ
+        = link_to "edit", "/groups/1/edit", class: "main__header-content-title__btn"
+        .main__header-content-title-name Member: seo neko
+  .main__container
+    .main__container-content
+      = render @messages
+  .footer
+    .footer__container
+      .footer__container-form
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: 'footer__container-form--message', placeholder: 'type a message'
+          .footer__container-form--image
+            = f.label :image, class: 'form__mask__image' do
+              = fa_icon 'picture-o', class: 'icon'
+              = f.file_field :image, class: 'hidden'
+          .footer__container-form--space
+          = f.submit 'Send', class: 'footer__container-form-btn'

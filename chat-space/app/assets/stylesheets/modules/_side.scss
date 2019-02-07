@@ -1,0 +1,56 @@
+.side {
+  width: 300px;
+  float: left;
+  height: 100vh;
+  &__user {
+    height: 13%;
+    background-color: #253141;
+    width: 100%;
+    position: relative;
+    &-content {
+      width: 100%;
+      line-height: 30px;
+      height: 30px;
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      margin: auto 0;
+      &-name {
+        margin: 0 20px;
+        color: $white;
+        font-size: 16px;
+        font-style: bold;
+        li.list{
+          list-style: none;
+          float: right;
+          margin-left: 10px;
+          .fa{
+          color: $white;
+        }
+        }
+      }
+    }
+  }
+  &__group {
+    height: 87%;
+    position: relative;
+    background-color: #2f3e51;
+    width: 100%;
+    &-content {
+      width: 100%;
+      height: 100px;
+      &-list{
+        padding: 20px;
+        color: $white;
+        &-name {
+          font-size: 15px;
+          margin-bottom: 5px;
+        }
+        &-message {
+              font-size: 11px;
+            }
+          }
+        }
+    }
+  }
+
