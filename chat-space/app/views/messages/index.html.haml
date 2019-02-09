@@ -1,34 +1,22 @@
-.notification
-  .notice チャットグループが作成されました
-.side
-  .side__user
-    .side__user-content
-      .side__user-content-name
-        user name
-        %a{:href => ""}
-          %i.fas.fa-cog
-        %a{:href => ""}
-          %i.fas.fa-edit
-  .side__group
-    = render partial: "group__user"
+= render partial: "side"
 .main
   .main__header
     .main__header-content
       .main__header-content-title
         .main__header-content-title__group sampleグループ
-        .main__header-content-title__btn Edit
-      .main__header-content-name Member: seo neko
+        = link_to "edit", "/groups/1/edit", class: "main__header-content-title__btn"
+        .main__header-content-title-name Member: seo neko
   .main__container
     .main__container-content
-      = render partial: "message"
+      = render @messages
   .footer
     .footer__container
-      .footer__container-body
-        .footer__container-body-form
-          %input.footer__container-body-form--message{placeholder: "type a message", type: "text"}/
-          .footer__container-body-form--image
-            %a.image{:href => "#"}
-              %i.far.fa-image
-
-          .footer__container-body-form--space
-        .footer__container-body-btn Send
+      .footer__container-form
+        = form_for [@group, @message], html: {id: 'new_message'} do |f|
+          = f.text_field :content, class: 'footer__container-form--message', placeholder: 'type a message'
+          .footer__container-form--image
+            = f.label :image, class: 'form__mask__image' do
+              = fa_icon 'picture-o', class: 'icon'
+              = f.file_field :image, class: 'hidden'
+          .footer__container-form--space
+          = f.submit 'Send', class: 'footer__container-form-btn'
