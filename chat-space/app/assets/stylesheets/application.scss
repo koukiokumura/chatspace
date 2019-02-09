@@ -2,8 +2,11 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "./variable";
-@import "./common";
-@import "./side";
-@import "./main";
-@import "./main__footer"
+@import "./modules/flash";
+@import "./modules/side";
+@import "./modules/main";
+@import "./modules/main__footer";
+@import "./modules/user";
+@import "./modules/group";
+
 

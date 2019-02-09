@@ -3,14 +3,14 @@
   width: calc( 100vw - 300px );
   height: 100vh;
   &__header {
-    height: 15%;
+    height: 13%;
     border: 1px solid $offwhite;
     &-content {
       margin: 0 40px;
       &-title {
         margin-top: 28px;
         &__group {
-          margin: 7px 0 15px;
+          margin: 7px 0 10px;
           width: 50%;
           font-size: 20px;
           color: #333333;
@@ -21,28 +21,29 @@
           color: $lightblue;
           padding: 15px 20px;
           border: 1px solid $lightblue;
-            }
           }
       &-name {
+        width:50%;
         clear: both;
         font-size: 12px;
         color: $gray;
             }
           }
         }
+      }
   &__container {
     background-color: $offwhite;
-    height:calc( 100vh - 15% - 92px );
+    height:calc( 100vh - 13% - 92px );
       &-content {
         height: 100%;
         margin: 0 40px;
         &-body {
             float: left;
-            height: 50px;
+            display: inline-block;
             width: 80%;
-            margin: 46px 0 40px;
+            margin-top: 46px ;
             &-name {
-                height: 20px;
+                display: inline-block;
                 &--user {
                     float: left;
                     font-size: 16px;
@@ -58,7 +59,8 @@
                     color: $gray;
                         }
                       }
-              .message{
+              p.lower-message__content{
+                text-align: left;
                 font-size: 14px;
                 margin-top: 10px;
               }

@@ -1,12 +1,12 @@
 .main__container-content-body
   .main__container-content-body-name
-    .main__container-content-body-name--user name
-    .main__container-content-body-name--time 2019-01-28 00:00:00
-  %p.message
-    こんにちは
-.main__container-content-body
-  .main__container-content-body-name
-    .main__container-content-body-name--user user name
-    .main__container-content-body-name--time 2019-01-28 00:00:00
-  %p.message
-    おはよう
+    .main__container-content-body-name--user
+      = message.user.name
+    .main__container-content-body-name--time
+      = message.created_at.strftime("%Y/%m/%d %H:%M")
+  .lower-message
+    - if message.content.present?
+      %p.lower-message__content
+        = message.content
+    = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+
