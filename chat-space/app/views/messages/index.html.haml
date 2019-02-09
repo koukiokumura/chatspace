@@ -12,7 +12,7 @@
   .footer
     .footer__container
       .footer__container-form
-        = form_for [@group, @message], html: {id: 'new_message'} do |f|
+        = form_for [@group, @message], html: {id: 'new_message'},remote: true do |f|
           = f.text_field :content, class: 'footer__container-form--message', placeholder: 'type a message'
           .footer__container-form--image
             = f.label :image, class: 'form__mask__image' do
