@@ -3,7 +3,7 @@ $(function(){
       var messageImage = '';
           if (message.image.url) {
           messageImage = `<img src="${message.image.url}">`;
-    }
+                              }
       var html = `<div class="main__container-content-body">
                     <div class="main__container-content-body-name">
                       <div class="main__container-content-body-name--user">
