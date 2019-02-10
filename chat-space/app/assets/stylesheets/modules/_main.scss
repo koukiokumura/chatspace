@@ -34,6 +34,7 @@
   &__container {
     background-color: $offwhite;
     height:calc( 100vh - 13% - 92px );
+    overflow: scroll;
       &-content {
         height: 100%;
         margin: 0 40px;

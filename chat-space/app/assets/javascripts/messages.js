@@ -47,4 +47,7 @@ $(function(){
       alert('error');
     })
   })
+  function scroll() {
+    $('.main__container').animate({scrollTop: $('.main__container')[0].scrollHeight}, 'fast')
+  }
 })
