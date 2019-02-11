@@ -41,13 +41,13 @@ $(function(){
       $('.footer__container-form--message').val('')
       $('.form__mask__image').val('')
       $('.footer__container-form-btn').prop('disabled',false);
-      scroll()
+      scrollToNewest()
     })
     .fail(function(){
       alert('error');
     })
   })
-  function scroll() {
+  function scrollToNewest() {
     $('.main__container').animate({scrollTop: $('.main__container')[0].scrollHeight}, 'fast')
   }
 
@@ -59,18 +59,17 @@ $(function(){
       type: 'GET',
       dataType: 'json'
     })
-    .done(function(json) {
+    .done(function(data) {
       var id = $('.main__container-content-body:last').data('id');
       var insertHTML = '';
-      json.messages.forEach(function(message) {
+      data.messages.forEach(function(message) {
         if (message.id > id ) {
           insertHTML += buildHTML(message);
         }
       });
       $('.main__container-content').append(insertHTML);
-    scroll()
+    scrollToNewest()
     })
-
     .fail(function(json) {
       alert('自動更新失敗');
     });
