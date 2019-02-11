@@ -64,8 +64,7 @@ $(function(){
       dataType: 'json'
     })
     .done(function(messageId) {
-      var insertHTML = '';
-      $.each(function(message) {
+      messageId.forEach(function(message) {
         insertHTML += buildHTML(message);
       });
       $('.main__container-content').append(insertHTML);
