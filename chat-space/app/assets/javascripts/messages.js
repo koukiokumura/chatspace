@@ -59,10 +59,10 @@ $(function(){
       type: 'GET',
       dataType: 'json'
     })
-    .done(function(data) {
+    .done(function(messageId) {
       var id = $('.main__container-content-body:last').data('id');
       var insertHTML = '';
-      data.messages.forEach(function(message) {
+      messageId.messages.forEach(function(message) {
         if (message.id > id ) {
           insertHTML += buildHTML(message);
         }
