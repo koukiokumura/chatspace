@@ -53,19 +53,20 @@ $(function(){
 
    var interval = setInterval(function() {
    var insertHTML = '';
+   var messageId = $('.main__container-content-body:last').data('id');
     if (window.location.href.match(/\/groups\/\d+\/messages/)) {
     $.ajax({
       url: location.href.json,
       type: 'GET',
+      data:{
+        message_id: messageId
+        },
       dataType: 'json'
     })
     .done(function(messageId) {
-      var id = $('.main__container-content-body:last').data('id');
       var insertHTML = '';
-      messageId.messages.forEach(function(message) {
-        if (message.id > id ) {
-          insertHTML += buildHTML(message);
-        }
+      $.each(function(message) {
+        insertHTML += buildHTML(message);
       });
       $('.main__container-content').append(insertHTML);
     scrollToNewest()
