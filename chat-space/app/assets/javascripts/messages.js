@@ -41,10 +41,39 @@ $(function(){
       $('.footer__container-form--message').val('')
       $('.form__mask__image').val('')
       $('.footer__container-form-btn').prop('disabled',false);
-      scroll()
+      scrollToNewest()
     })
     .fail(function(){
       alert('error');
     })
   })
-})
+  function scrollToNewest() {
+    $('.main__container').animate({scrollTop: $('.main__container')[0].scrollHeight}, 'fast')
+  }
+
+   var interval = setInterval(function() {
+   var insertHTML = '';
+   var messageId = $('.main__container-content-body:last').data('id');
+    if (window.location.href.match(/\/groups\/\d+\/messages/)) {
+    $.ajax({
+      url: location.href.json,
+      type: 'GET',
+      data:{
+        message_id: messageId
+        },
+      dataType: 'json'
+    })
+    .done(function(messageId) {
+      messageId.forEach(function(message) {
+        insertHTML += buildHTML(message);
+      });
+      $('.main__container-content').append(insertHTML);
+    scrollToNewest()
+    })
+    .fail(function(json) {
+      alert('自動更新失敗');
+    });
+    } else {
+    clearInterval(interval);
+   }} ,  5000 );
+});
