@@ -31,7 +31,7 @@ namespace :deploy do
     invoke 'unicorn:restart'
   end
   task :start do
-   invoke 'unicorn:restart'
+   invoke 'unicorn:start'
   end
   desc 'upload secrets.yml'
   task :upload do
