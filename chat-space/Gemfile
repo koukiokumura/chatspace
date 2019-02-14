@@ -69,16 +69,8 @@ gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'font-awesome-rails'
-<<<<<<< Updated upstream
-
-=======
 gem 'fog-aws'
->>>>>>> Stashed changes
 group :production do
   gem 'unicorn'
   gem 'unicorn-rails'
 end
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes

@@ -291,12 +291,9 @@ GEM
     unicorn (5.4.1)
       kgio (~> 2.6)
       raindrops (~> 0.7)
-<<<<<<< Updated upstream
-=======
     unicorn-rails (2.2.1)
       rack
       unicorn
->>>>>>> Stashed changes
     warden (1.2.8)
       rack (>= 2.0.6)
     web-console (3.7.0)
@@ -349,10 +346,7 @@ DEPENDENCIES
   tzinfo-data
   uglifier (>= 1.3.0)
   unicorn
-<<<<<<< Updated upstream
-=======
   unicorn-rails
->>>>>>> Stashed changes
   web-console (>= 3.3.0)
 
 BUNDLED WITH
