@@ -27,10 +27,12 @@ set :default_env, {
 
 after 'deploy:publishing', 'deploy:restart'
 namespace :deploy do
+  desc 'Restart application'
   task :restart do
+    on roles(:app) do
     invoke 'unicorn:restart'
+    end
   end
-
   desc 'upload secrets.yml'
   task :upload do
     on roles(:app) do |host|
