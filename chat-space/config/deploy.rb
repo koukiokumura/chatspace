@@ -30,9 +30,6 @@ namespace :deploy do
   task :restart do
     invoke 'unicorn:restart'
   end
-  task :start do
-   invoke 'unicorn:start'
-  end
   desc 'upload secrets.yml'
   task :upload do
     on roles(:app) do |host|
