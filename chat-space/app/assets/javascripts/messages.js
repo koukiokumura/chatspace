@@ -50,4 +50,31 @@ $(function(){
   function scroll() {
     $('.main__container').animate({scrollTop: $('.main__container')[0].scrollHeight}, 'fast')
   }
-})
+
+   var interval = setInterval(function() {
+   var insertHTML = '';
+    if (window.location.href.match(/\/groups\/\d+\/messages/)) {
+    $.ajax({
+      url: location.href.json,
+      type: 'GET',
+      dataType: 'json'
+    })
+    .done(function(json) {
+      var id = $('.main__container-content-body:last').data('id');
+      var insertHTML = '';
+      json.messages.forEach(function(message) {
+        if (message.id > id ) {
+          insertHTML += buildHTML(message);
+        }
+      });
+      $('.main__container-content').append(insertHTML);
+    scroll()
+    })
+
+    .fail(function(json) {
+      alert('自動更新失敗');
+    });
+    } else {
+    clearInterval(interval);
+   }} ,  5000 );
+});
